@@ -19,6 +19,7 @@ def import_and_predict(image_data,model):
     image=ImageOps.fit(image_data,size,Image.Resampling.LANCZOS)
     img=np.asarray(image)
     img_reshape=img[np.newaxis,...]
+    img_reshape = tf.convert_to_tensor(XXX[:,:,:3])
     prediction=model.predict(img_reshape)
     return prediction
 if file is None:
