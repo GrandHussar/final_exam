@@ -1,2 +1,2 @@
 Tensorflow
-opencv-python
+opencv-python-headless
