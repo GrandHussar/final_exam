@@ -27,6 +27,6 @@ else:
     image = Image.open(file).convert("RGB")
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
-    class_names=['1','2','3','4','5','6','7','8','9','0']
+    class_names=['0','1','2','3','4','5','6','7','8','9']
     string="OUTPUT : "+class_names[np.argmax(prediction)]
     st.success(string)
