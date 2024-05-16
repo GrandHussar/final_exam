@@ -26,9 +26,7 @@ if file is None:
     st.text("Please upload an image file")
 else:
     image=Image.open(file)
-    if len(image.shape) > 2 and image.shape[2] == 4:
-        #convert the image from RGBA2RGB
-        image = cv2.cvtColor(image, cv2.COLOR_BGRA2BGR)
+    image = np.array(image.convert("RGB"))
     st.image(image,use_column_width=True)
     prediction=import_and_predict(image,model)
     class_names=['1','2','3','4','5','6','7','8','9','0']
