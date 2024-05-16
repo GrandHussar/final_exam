@@ -1,5 +1,4 @@
 import streamlit as st
-!pip install tensorflow
 import tensorflow as tf
 
 @st.cache(allow_output_mutation=True)
